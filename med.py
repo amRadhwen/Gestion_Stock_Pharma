@@ -10,8 +10,8 @@ class Pharmacy:
         self.root = root
         self.root.title("Pharmacy Management System")
         self.root.geometry("1350x800+0+0")
-        self.root.resizable(False, False)
-        #self.root.iconbitmap(r"image/doc.ico")
+        self.root.resizable(True, True)
+        self.root.iconbitmap(r"image/doc.ico")
 
         ##### ADDMED VARIABLE ######
         self.ref_variable = StringVar()
@@ -36,14 +36,14 @@ class Pharmacy:
         self.search_txt = StringVar()
 
         ######## title animation #########
-        self.txt = "PHARMACY MANAGEMENT SYSTEM"
+        self.txt = "Gestion De Stock Pharmacie"
         self.count = 0
         self.text = ""
         self.color = ["blue", "red", "green"]
         self.heading = Label(self.root, text=self.txt, font=(
             "times new roman", 30, "bold"), bg='#7FFFD4', fg="blue", bd=9, relief=RIDGE)
         self.heading.pack(side=TOP, fill=X)
-        self.slider()
+        #self.slider()
         self.heading_color()
 
         # lbltitle=Label(self.root,text=" PHARMACY MANAGEMENT SYSTEM",bd=11,relief=RIDGE
@@ -51,8 +51,8 @@ class Pharmacy:
         # lbltitle.pack(side=TOP,fill=X)
 
         ######### pharmacy logo label #######
-        img1 = Image.open(r"image/new.png")
-        img1 = img1.resize((70, 45))#, Image.ANTIALIAS)
+        img1 = Image.open(r"image/logo.png")
+        img1 = img1.resize((50, 40))
         self.photoimg1 = ImageTk.PhotoImage(img1)
         b1 = Button(self.root, image=self.photoimg1,
                     borderwidth=0, bg='#7FFFD4')
